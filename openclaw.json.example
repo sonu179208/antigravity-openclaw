@@ -1,0 +1,29 @@
+{
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "antigravity": {
+        "baseUrl": "http://127.0.0.1:18888/v1",
+        "apiKey": "antigravity-local-key",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "antigravity",
+            "name": "Antigravity Bridge",
+            "reasoning": false,
+            "input": ["text"],
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "antigravity/antigravity"
+      }
+    }
+  }
+}
